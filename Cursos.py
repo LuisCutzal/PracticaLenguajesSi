@@ -1,53 +1,47 @@
 #ClassCursos es la cvlase que genera los objetos que seran parte de la lista
 class Cursos(object):
-    """codigo =0
-    nombre=""
-    prerrequisitos=0
-    opcionalidad=0
-    semestre=0
-    creditos=0
-    estado=0"""
+
 #---------------------------metodos-----------------------------------------------
     def __init__ (self, codigo, nombre, prerrequisitos, opcionalidad, semestre, creditos, estado):
         self.codigo=codigo
         self.nombre=nombre
-        self.prerrequisitos=prerrequisitos #[] colocar esto luego
+        self.prerrequisitos=prerrequisitos  
         self.opcionalidad=opcionalidad
         self.semestre=semestre
         self.creditos=creditos
         self.estado=estado
-
+    
 #---------------get----------------
     def getCodigo(self):
-        return self.codigo
+        return str(self.codigo)
 
     def getNombre(self):
-        return self.nombre
+        return str(self.nombre)
 
     def getPrerrequisitos(self):
         return self.prerrequisitos
 
     def getOpcionalidad(self):
-        return self.opcionalidad
+        return int(self.opcionalidad)
 
     def getSemestre(self):
-        return self.semestre
+        return (self.semestre)
 
     def getCreditos(self):
-        return self.creditos
+        return int(self.creditos)
 
     def getEstado(self):
-        return self.estado
+        return int(self.estado)
 
 #-----------set------------
     def setCodigo(self, nuevoCodigo):
-        self.codigo=nuevoCodigo
+        self.codigo=str(nuevoCodigo)
 
     def setNombre(self, nuevoNombre):
         self.nombre=nuevoNombre
 
     def setPrerrequisitos(self, nuevoPrerrequisitos):
-        self.prerrequisitos=nuevoPrerrequisitos
+        self.prerrequisitos=nuevoPrerrequisitos 
 
     def setOpcionalidad(self, nuevoOpcionalidad):
         self.opcionalidad=nuevoOpcionalidad
@@ -60,7 +54,11 @@ class Cursos(object):
 
     def setEstado(self, nuevoEstado):
         self.estado=nuevoEstado
-    
+
+    def APrep(self, Aprep):
+        self.prerrequisitos.push(Aprep)
+
+
 
     def __str__(self):
         return (self.codigo, self.nombre, self.prerrequisitos, self.opcionalidad, self.semestre, self.creditos, self.estado)

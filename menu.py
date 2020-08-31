@@ -2,16 +2,14 @@ import os
 import sys
 import time
 import Cargar_archivo
-import Conteo_creditos
 import Gestionar_curso
-import Mapa_cursos 
-
 #menu opcion 1
 def Op1():
     print("Ha elegido cargar archivo")
     print("espere...")
     time.sleep(2)
-    Cargar_archivo.Prueva()
+    #ruta='datos/archivo.csv'
+    Cargar_archivo.Archivos()
     #os.system('cls')
 #----------------
 #menu opcion 2
@@ -25,11 +23,13 @@ def Op2():
 def Op3():
     print("Ha elegido el Conteo de Creditos:")
     print("espere....")
+    Gestionar_curso.ConteoCreditos()
 #---------------
 #menu opcion 4
 def Op4():
     print("Ha elegido el Mapa de Cursos:")
     print("espere....")
+    
 #--------------
 def MenuInicio():
     while True:
@@ -70,4 +70,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
